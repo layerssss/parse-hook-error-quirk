@@ -1,5 +1,7 @@
 # parse-hook-error-quirk
 
+https://github.com/ParsePlatform/Parse-SDK-JS/issues/399
+
 When a hook yields an error in `beforeSave` hook. The change to an object is not applied. Call `Query.find` in browser again. API from parse-server are returning unchanged attributes of the object. But the `Query.find` is returning the changed obect.
 
 Expect: `Query.find` should return the unchanged object.
