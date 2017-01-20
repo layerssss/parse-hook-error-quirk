@@ -8,6 +8,8 @@ Parse-server version: 2.3.2
 
 Parse-JS-SDK: 1.9.2
 
+Note: We have a running system with Parse-JS-SDK 1.5 with parse.com, on which this issue doesn't exist.
+
 ## To run
 
 ```
