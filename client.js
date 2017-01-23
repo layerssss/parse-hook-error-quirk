@@ -1,5 +1,6 @@
 Parse.initialize('myAppId');
 Parse.serverURL = '/';
+Parse.Object.disableSingleInstance();
 
 new Parse.Query('Folder').first()
   .then(folder => {
@@ -15,13 +16,13 @@ new Parse.Query('Folder').first()
       })
       .then(() => new Parse.Query('Folder').first())
       .then(folder_2 => {
-        console.log('expected new name: Untitled Folder'); // Renamed Folder
+        console.log('expected new name: Untitled Folder'); // Untitled Folder
         console.log('new name:' + folder_2.get('name'));
         console.log('is it the same object?');
         console.log(folder === folder_2); // False
 
 
         folder_2.set('name', 'Renamed again');
-        console.log(folder.get('name')); // Renamed again
+        console.log(folder.get('name')); // Renamed Forder
       });
   });
